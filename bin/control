@@ -27,7 +27,13 @@ function build {
     unset GIT_WORK_TREE
 
     cd ${OPENSHIFT_REPO_DIR}
-    activator clean stage -Duser.home=${OPENSHIFT_DATA_DIR} -mem 512
+    cd target/universal
+    [ ! -d stage ] && mkdir stage
+    cd stage
+    unzip ../lrs-1.0.zip
+    mv lrs-1.0/* .
+    rm -f lrs-1.0
+    echo "build complete ...."
 }
 
 function tidy {
