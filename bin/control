@@ -27,7 +27,7 @@ function build {
     unset GIT_WORK_TREE
 
     cd ${OPENSHIFT_REPO_DIR}
-    if [ -d target]; then
+    if [ -d target ]; then
       cd target/universal
       [ ! -d stage ] && mkdir stage
       cd stage
