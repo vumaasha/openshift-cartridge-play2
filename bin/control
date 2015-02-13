@@ -33,7 +33,7 @@ function build {
       cd stage
       unzip ../lrs-1.0.zip
       mv lrs-1.0/* .
-      rm -f lrs-1.0
+      rm -r lrs-1.0
     fi
     echo "build complete ...."
 }
